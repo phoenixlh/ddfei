@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>ECSHOP 管理中心</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="login.css"/>
+	<body>
+		<form class="login-body" action="" method="post">
+			<div id="tou">
+				<img src="../images/shopex.png"/>
+			</div>
+			<div id="wrap">
+				<div class="top">
+					<img src="../images/ecshop-logo.png"/>
+				</div>
+				<div class="bot">
+					<div class="bot-con">
+						<div class="un">
+							<em></em>
+							<input type="text" id="username" placeholder="用户名" />
+						</div>
+						<div class="psw">
+							<em></em>
+							<input type="password" id="pwd" placeholder="密码" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btn">
+				<input type="submit" value="登录" onclick="login()"/>
+			</div>
+		</form>
+	</body>
+</html>
+<script src="../../../../day04/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	$.ajax({
+		type:"get",
+		url:"/api/login",
+		async:true,
+		data:{
+			username:$("#username").val(),
+			pwd:$("#pwd").val()
+		},
+		success:function(res){
+			console.log(res);
+		}
+	});
+</script>
