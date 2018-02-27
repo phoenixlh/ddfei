@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <html>
 	<head>
+		<meta name="" content=""charset="utf-8"/>
 		<title>ECSHOP 管理中心</title>
+		
 	</head>
-	<link rel="stylesheet" type="text/css" href="login.css"/>
+	<link rel="stylesheet" type="text/css" href="../login.css"/>
 	<body>
 		<form class="login-body" action="" method="post">
 			<div id="tou">
@@ -16,25 +19,25 @@
 					<div class="bot-con">
 						<div class="un">
 							<em></em>
-							<input type="text" id="username" placeholder="用户名" />
+							<input type="text" id="username" class="no1" placeholder="用户名" />
 						</div>
 						<div class="psw">
 							<em></em>
-							<input type="password" id="pwd" placeholder="密码" />
+							<input type="password" id="pwd" class="no1" placeholder="密码" />
+						</div>
+						<div class="btn">
+							<input type="submit" value="登录" id="lg"  onclick="login()"/>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="btn">
-				<input type="submit" value="登录" onclick="login()"/>
-			</div>
 		</form>
 	</body>
 </html>
-<script src="../../../../day04/jquery-1.11.1.js"></script>
+<script src="/js/jquery-1.11.1.js"></script>
 <script type="text/javascript">
 	$.ajax({
-		type:"get",
+		type:"post",
 		url:"/api/login",
 		async:true,
 		data:{
