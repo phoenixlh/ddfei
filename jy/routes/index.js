@@ -9,5 +9,15 @@ router.get('/', function(req, res, next) {
 router.post('/api/login',function(req,res){
 	var username = req.body.username;
 	var pwd = req.body.pwd;
-})
+	UserModel.find({username:username,pwd:pwd},function(err,docs){
+		if( !err && docs.length > 0 ){
+			console.log("登录成功");
+			res.send("登录成功");
+		}else{
+			console.log("登录失败");
+			res.send("登录失败");
+		}
+	})
+});
+
 module.exports = router;
