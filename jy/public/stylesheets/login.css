@@ -48,7 +48,7 @@ body{
     overflow: hidden;
     padding-bottom: 42px;
     height: 350px;
-    background: url(/images/icloud-bar.png) no-repeat 0 bottom;
+    background: url(../images/icloud-bar.png) no-repeat 0 bottom;
     margin-top:45px;
 }
 .bot-con{
