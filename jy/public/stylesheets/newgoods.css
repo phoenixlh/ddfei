@@ -1,0 +1,202 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+#zong{
+	background: url(../images/body_bj.jpg);
+    padding: 10px;
+    color: #192E32;
+    font: 12px Microsoft Yahei, "sans-serif", "Arial", "Verdana";
+}
+#too{
+	display: block;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    font-weight: normal;
+    padding: 7px 10px;
+    margin: 0 0 10px 0;
+    overflow: hidden;
+}
+#too .s1{
+	font-size: 18px;
+	color: #4c4c4c;
+    font-weight: normal;
+}
+#too .s2{
+	color: #4c4c4c;
+    font-size: 18px;
+    font-weight: normal;
+}
+#too .s4 a{
+	float: right;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px 0 23px;
+    background: #c43926 url(../images/icon_add02.gif) no-repeat 6px center;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+#bott{
+	background: #f3f3f3;
+    border: 1px solid #d7d7d7;
+    margin: 0 0 10px 0;
+    padding: 1px;
+}
+#sh{
+	margin-top: 0px;
+    background: #efefef;
+    padding-left: 10px;
+    height: 39px;
+}
+#sh ul{
+	margin: 2px 0 0 0;
+}
+#sh li{
+	float: left;
+	background: #fefefe;
+    height: 39px;
+    line-height: 39px;
+    display: block;
+    padding: 0 20px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    /*tab切换
+    padding: 0 20px;
+    text-align: center;
+    font-size: 13px;
+    float: left;
+    display: block;
+    float: left;
+    color: #787878;
+    line-height: 39px;
+    cursor: hand;
+    cursor: pointer;
+    */
+
+
+#xi{
+	padding: 10px;
+    background: #fefefe;
+}
+table{
+	display: table;
+	width: 90%;
+	border-collapse: separate;
+	border-spacing: 2px;
+	border-color: grey;
+	margin: 5px 0;
+	border:0;
+}
+tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+td{
+	display: table-cell;
+	vertical-align: inherit;
+	border: 0;
+}
+input{
+	/*border: none;*/
+	outline: none; 
+	background-color: white; 
+	cursor: text; 
+	text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start; 
+}
+td.label {
+    text-align: right;
+    vertical-align: top;
+    font-weight: bold;
+    padding: 5px 1em;
+    width: 30%;
+    line-height: 30px;
+}
+select{
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    color: black;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(169, 169, 169);
+}
+.require-field {
+    margin-left: 1em;
+    font: 12px verdana;
+    color: #FF0000;
+}
+.button {
+    padding: 5px 15px 5px;
+    margin: 2px 2px;
+    border: none;
+    background: #ff3f3f;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.button-div {
+    text-align: center;
+    padding: 3px 0;
+}
+
+#xi2{
+	padding: 10px;
+    background: goldenrod;
+}
+#xi3{
+	padding: 10px;
+    background: yellowgreen;
+}
+#xi4{
+	padding: 10px;
+    background: lightblue;
+}
+#xi5{
+	padding: 10px;
+    background: lightsalmon;
+}
+#xi6{
+	padding: 10px;
+    background: lightgreen;
+}
+#xi7{
+	padding: 10px;
+    background: lightgray;
+}
+#xi8{
+	padding: 10px;
+    background: lightsteelblue;
+}
