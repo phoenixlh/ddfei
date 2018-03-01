@@ -5,7 +5,7 @@
 		<title>ECSHOP 管理中心</title>
 		
 	</head>
-	<link rel="stylesheet" type="text/css" href="http://localhost:8080/stylesheets/login.css"/>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/login.css"/>
 <body>
 		<!--<form class="login-body" action="" method="post">-->
 		<div class="login-body">
@@ -50,6 +50,11 @@
 			},
 			success:function(res){
 				console.log(res);
+				if(res.status == 1){
+					location.href = "/index"
+				}else{
+					alert(res.message);
+				}
 			}
 		});
 	}

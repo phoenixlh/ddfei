@@ -26,4 +26,17 @@ $(".dd li").click(function(){
 	         .siblings()
 	         .css("display","none")
 })
-}
+
+//删除
+$(".del").click(function(){
+	var info = "确定删除吗？";
+	if(confirm(info)){
+//		return true;
+		$(this).parent().parent().remove();
+	}else{
+		return false;
+	}
+})
+
+
+}//window大括号
