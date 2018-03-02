@@ -10,13 +10,14 @@ a{
 	cursor: pointer;
 }
 #rig{
-	overflow-y:scroll ;
+	overflow:hidden ;
 	height: 100%;
 }
 .ri-con{
 	background: url(/images/body_bj.jpg);
 	padding:10px 10px 10px 20px;
     font: 12px Microsoft Yahei, "sans-serif", "Arial", "Verdana";
+    
 }
 h1{
 	border-bottom: 1px solid #ccc;
@@ -84,7 +85,6 @@ h1 span{
     width: 24.24%;
     height: 80px;
     margin-left: 1%;
-    /*background: #ccc;*/
 }
 .item01 {
     background: #27a9e3;
@@ -180,14 +180,6 @@ h1 span{
 .list-div a{
     color: #192E32;
 }
-/*.clearfix:after{
-	content: ".";
-	display: block;
-	height: 0;
-	clear:both;
-	overflow: hidden;
-	visibility: hidden;
-}*/
 .item07{
 	margin-left: 0!important;
 }

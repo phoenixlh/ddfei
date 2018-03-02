@@ -10,7 +10,7 @@ a{
 	cursor: pointer;
 }
 #zong{
-	background: url(../images/body_bj.jpg);
+	background: url(/images/body_bj.jpg);
     padding: 10px;
     color: #192E32;
     font: 12px Microsoft Yahei, "sans-serif", "Arial", "Verdana";
@@ -39,7 +39,7 @@ a{
     height: 26px;
     line-height: 26px;
     padding: 0 10px 0 23px;
-    background: #c43926 url(../images/icon_add02.gif) no-repeat 6px center;
+    background: #c43926 url(/images/icon_add02.gif) no-repeat 6px center;
     border-radius: 3px;
     color: #fff;
     font-size: 13px;
@@ -47,7 +47,6 @@ a{
     text-align: center;
     cursor: pointer;
 }
-
 
 #bott{
 	background: #f3f3f3;
@@ -75,21 +74,6 @@ a{
     font-weight: bold;
     cursor: pointer;
 }
-
-    /*tab切换
-    padding: 0 20px;
-    text-align: center;
-    font-size: 13px;
-    float: left;
-    display: block;
-    float: left;
-    color: #787878;
-    line-height: 39px;
-    cursor: hand;
-    cursor: pointer;
-    */
-
-
 #xi{
 	padding: 10px;
     background: #fefefe;
@@ -119,7 +103,6 @@ td{
 	border: 0;
 }
 input{
-	/*border: none;*/
 	outline: none; 
 	background-color: white; 
 	cursor: text; 

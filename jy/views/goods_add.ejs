@@ -6,7 +6,7 @@
 	</head>
 	<link rel="stylesheet" type="text/css" href="/stylesheets/goodsadd.css"/>
 	<script type="text/javascript" src="/js/jquery-1.11.1.js"></script>
-	<script src="../sta.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/sta.js" type="text/javascript" charset="utf-8"></script>
 	<body>
 		<div id="zong">
 			<div id="too">
@@ -18,7 +18,7 @@
 				</span>
 				<span class="s3">
 					<a>
-						<img src="../public/images/jnsy.png"/>
+						<img src="/images/jnsy.png"/>
 					</a>
 				</span>
 				<span class="s4">
@@ -53,8 +53,8 @@
 									<td class="label">商品名称：</td>
 									<td>
 										<input type="text" name="goodsname" id="" value="" style="float: left; margin: 5px 0; padding: 1px 0px;" />
-										<div id="font_color" style="float:left ;margin:10px 0 0 5px; onclick=show()">
-											<img src="../public/images/color_selecter.gif" style="    margin-top: -1px;"/>
+										<div id="font_color" style="float:left ;margin:10px 0 0 5px; onclick="show()">
+											<img src="/images/color_selecter.gif" style="    margin-top: -1px;"/>
 										</div>
 								
 										<select name="goods_name_style" style="margin: 5px 5px;">
@@ -71,7 +71,7 @@
 								<tr>
 									<td class="label">
 										<a href="#" title="点击此处查看提示信息" >
-											<img src="../public/images/notice.gif" alt="点击此处查看提示信息"/ style="width: 16px; height: 16px;">
+											<img src="/images/notice.gif" alt="点击此处查看提示信息"/ style="width: 16px; height: 16px;">
 										</a>
 										 商品货号： 
 									</td>
@@ -118,15 +118,15 @@
 								<tr>
 									<td class="label">本店售价：</td>
 									<td>
-										<input type="text" name="goodsprice" value="0" size="20" <!--onblur="price()-->>
-            							<input type="button" value="按市场价计算" onclick="marketPriceSetted()">
+										<input type="text" name="goodsprice" value="0" size="20">
+            							<input type="button" value="按市场价计算" onclick="">
             <span class="require-field">*</span></td>
 								</tr>
 								
 								<tr>
 						            <td class="label">市场售价：</td>
 						            <td><input type="text" name="" value="0" size="20">
-						              <input type="button" value="取整数" onclick="integral_market_price()">
+						              <input type="button" value="取整数" onclick="">
 						            </td>
 						        </tr>
 						        
@@ -150,7 +150,7 @@
 						            <td class="label">上传商品图片：</td>
 						            <td>
 						            <input type="file" name="goods_img" size="35">
-						            <img src="../public/images/no.gif"><br>
+						            <img src="/images/no.gif"><br>
 						            <input type="text" size="40" value="商品图片外部URL" style="color:#aaa;" name="goods_img_url">
 						            </td>
 						         </tr>
@@ -159,7 +159,7 @@
 						            <td class="label"> 上传商品缩略图：</td>
 						            <td id="auto_thumb_3">
 						              <input type="file" name="goods_thumb" size="35" disabled="">
-						            <img src="../public/images/no.gif"><br>
+						            <img src="/images/no.gif"><br>
 						            <input type="text" size="40" value="商品缩略图外部URL" style="color:#aaa;" name="goods_thumb_url" disabled=""> <br>
 						            <label for="auto_thumb"><input type="checkbox" id="auto_thumb" name="auto_thumb" checked="true" value="1" onclick="AutoThumb()">自动生成商品缩略图</label>            
 						            </td>
@@ -168,8 +168,8 @@
 						</table>
 						<div class="button-div">
 				          	<input type="hidden" name="goods_id" value="0">
-				            <input type="button" value=" 确定 " class="button" onclick="addgoods()">
-				            <input type="reset" value=" 重置 " class="button">
+				            <input type="button" value=" 确定 " name="sure" class="button" onclick="addgoods()">
+				            <input type="reset" value=" 重置 " name="reset" class="button">
 				        </div>
 	
 					</form>
