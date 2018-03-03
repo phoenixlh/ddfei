@@ -55,12 +55,6 @@
 											<img src="/images/color_selecter.gif" style="margin-top: -1px;"/>
 										</div>
 								
-										<select name="goods_name_style" style="margin: 5px 5px;">
-							              	<option value="">字体样式</option>
-							              	<option value="strong">加粗</option>
-							              	<option value="em">斜体</option>
-							              	<option value="u">下划线</option>
-							              	<option value="strike">删除线</option>            										</select>
 							              	<span class="require-field">*</span>
 									</td>
 								</tr>
@@ -103,7 +97,7 @@
 										<select name="brand_id" onchange="">
 											<option value="0">请选择...</option><option value="45">gr</option>
 											<option value="33">空间大师</option><option value="32">溢彩年华</option>
-											<option value="41">雅培</option><option value="40">好事达</option><option value="39">千弘</option>
+											<option value="41">雅培</option>
 										</select>
 										<a title="添加品牌" onclick=pp() class="special">添加品牌</a>
 									</td>
@@ -114,8 +108,7 @@
 									<td>
 										<input type="text" name="goodsprice" value="0" size="20">
             							<input type="button" value="按市场价计算" onclick="">
-            							<span class="require-field">*</span>
-									</td>
+            <span class="require-field">*</span></td>
 								</tr>
 								
 								<tr>
@@ -130,14 +123,14 @@
 						            <td><input type="text" name="virtual_sales" value="0" size="20">
 						            </td>
 						        </tr>
-												        
-								 <tr id="promote_4">
+						        
+						        <tr id="promote_4">
 						            <td class="label" id="promote_5">促销日期：</td>
 						            <td id="promote_6">
-							            <input name="promote_start_date" type="text" id="promote_start_date" size="12" value="2018-02-28" readonly="readonly">
-							            <input name="selbtn1" type="button" id="selbtn1" onclick="" value="选择" class="button" disabled=""> - 
-							            	<input name="promote_end_date" type="text" id="promote_end_date" size="12" value="2018-03-28" readonly="readonly">
-							            <input name="selbtn2" type="button" id="selbtn2" onclick="" value="选择" class="button" disabled="">
+						            <input name="promote_start_date" type="text" id="promote_start_date" size="12" value="2018-02-28" readonly="readonly">
+						            <input name="selbtn1" type="button" id="selbtn1" onclick="" value="选择" class="button" disabled=""> - 
+						            	<input name="promote_end_date" type="text" id="promote_end_date" size="12" value="2018-03-28" readonly="readonly">
+						            <input name="selbtn2" type="button" id="selbtn2" onclick="" value="选择" class="button" disabled="">
 						            </td>
 						        </tr>
 						        
@@ -168,6 +161,7 @@
 				        </div>
 					</form>
 				</div>
+				
 				
 				<!--tab切换-->
 				<div id="xi2" class="xx1" style="display: none;"></div>

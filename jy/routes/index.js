@@ -18,19 +18,11 @@ router.get('/right', function(req, res, next) {
   res.render('right');
 });
 
-//router.get('/list', function(req, res) {
-//		GoodsModel.find(function(err,docs){
-////			var pageNo = parseInt(req.query.pageNo) || 1;
-////	 	var count = parseInt(req.query.count) || 3;
-//	 	
-////	 	var query = GoodsModel.find({}).skip( (pageNo-1)*count ).limit(count).sort({date:-1});
-////	 	query.exec(function(err,results){
-////	 		res.render('list',{list:results,pageNo:pageNo,count:count});
-////	 	})
-//			res.render('list',{list:docs});			
-////		})
-//});
 
+//添加商品页
+router.get('/goods_add', function(req, res, next) {
+  res.render('goods_add');
+});
 
 //商品列表页面
 router.get('/list',function(req,res){
@@ -40,12 +32,11 @@ router.get('/list',function(req,res){
 })
 
 
-//商品查询功能
+//模糊查询功能
 router.get('/api/goodslist',function(req,res){
 	var goodsname = req.query.goodsname;
-//	GoodsModel.find({goodsname:goodsname},function(err,docs){
-		GoodsModel.find({goodsname:{$regex:goodsname}},function(err,docs){
-		res.render('list',)
+	GoodsModel.find({goodsname:{$regex:goodsname}},function(err,docs){
+//	res.render('list',{list:docs});
 		var result = {
 			status:1,
 			message:"查询成功"
@@ -62,34 +53,26 @@ router.get('/api/goodslist',function(req,res){
 	})
 })
 
-//登录功能
-router.post('/api/login',function(req,res){
-	var username = req.body.username;
-	var pwd = req.body.pwd;
-	console.log(username,pwd);
-	var result = {
-		status:1,
-		message:"登录成功"
-	}
-	UserModel.find({username:username,pwd:pwd},function(err,docs){
-//		console.log(docs.length);
-		if(!err && docs.length > 0 ){
-			console.log("登录成功");
-			res.send(result);
-		}else{
-			console.log("登录失败");
-			result.status = -300;
-			result.message = "登录失败"
-			res.send(result);
-		}
+//返回模糊查询结果，渲染页面功能
+router.get('/api/xuanranlist',function(req,res){
+	var pageNo = parseInt(req.query.pageNo || 1);
+	var count = parseInt(req.query.count || 3);
+//	var query = GoodsModel.find({}).skip( (pageNo-1)*count ).limit(count).sort({date:-1});
+//	query.exec(function(err,results){
+//		res.send({list:results,pageNo:pageNo,count:count});
+		res.render('list',{list:results,pageNo:pageNo,count:count});
 	})
-});
+})
 
-
-//添加商品页
-router.get('/goods_add', function(req, res, next) {
-  res.render('goods_add');
-});
+//分页功能
+//router.get('/list',function(req,res){
+//	var pageNo = parseInt(req.query.pageNo || 1);
+//	var count = parseInt(req.query.count || 3);
+//	var query = GoodsModel.find({}).skip( (pageNo-1)*count ).limit(count).sort({date:-1});
+//	query.exec(function(err,results){
+//		res.render('list',{list:results,pageNo:pageNo,count:count});
+//	})
+//})
 
 
 //商品保存功能
@@ -115,17 +98,37 @@ router.post('/api/add_goods',function(req,res){
 	 			status : 66,
 	 			message : "ok"
 	 		}
-	 		if(!err){
-	 			console.log("商品保存成功");
-	 			res.send(result);
-	 		}else{
-	 			console.log("商品保存失败");
+	 		if(err){
 	 			result.status = -333;
-	 			result.message = "商品保存失败";
-	 			res.send(result);
+	 			result.message = "商品保存失败";	 
 	 		}
+	 		res.send(result);
 	 	});
 });
 })
+
+
+//登录功能
+router.post('/api/login',function(req,res){
+	var username = req.body.username;
+	var pwd = req.body.pwd;
+	console.log(username,pwd);
+	var result = {
+		status:1,
+		message:"登录成功"
+	}
+	UserModel.find({username:username,pwd:pwd},function(err,docs){
+//		console.log(docs.length);
+		if(!err && docs.length > 0 ){
+			console.log("登录成功");
+			res.send(result);
+		}else{
+			console.log("登录失败");
+			result.status = -300;
+			result.message = "登录失败"
+			res.send(result);
+		}
+	})
+});
 
 module.exports = router;

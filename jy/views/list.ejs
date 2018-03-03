@@ -28,7 +28,7 @@
 				</span>
 			</div>
 			
-				<div id="search">
+				<div id="searc">
 					关键字：
 					<input type="text" class="keywords" />
 					<input type="button" value="搜索" class="search" onclick="search()"/>
@@ -36,7 +36,7 @@
 				
 	<form method="post" action="" name="listForm" >
   		<div class="list-div" id="listDiv">
-			<table cellpadding="3" cellspacing="1">
+			<table cellpadding="3" cellspacing="1" class="con">
 			  <tbody>
 			  	<tr>
 				    <th>
@@ -96,42 +96,6 @@
 				</tr>
 				<% } %>
 				
-				<!--<tr>
-					<td style="background-color: rgb(255, 255, 255);">
-					    	<input type="checkbox" name="checkboxes[]" value="274">274</td>
-					<td class="first-cell" style="background-color: rgb(255, 255, 255);">
-					    <span onclick="">貂皮大衣</span></td>
-					<td align="center" style="background-color: rgb(255, 255, 255);">
-					    <span onclick="">ECS000274</span></td>
-					<td align="center" style="background-color: rgb(255, 255, 255);">
-					    <span onclick="">0.00</span>
-					</td>
-					<td align="center" style="background-color: rgb(255, 255, 255);">
-					    <img src="/images/yes.gif" onclick="">
-					</td>
-					<td align="center" style="background-color: rgb(255, 255, 255);">
-					    <img src="/images/no.gif" onclick=""></td>
-					<td align="center" style="background-color: rgb(255, 255, 255);">
-					    <img src="/images/no.gif" onclick=" 'toggle_new', 274)">
-					</td>
-					<td align="center" style="background-color: rgb(255, 255, 255);">
-					    <img src="/images/no.gif" onclick=" 'toggle_hot', 274)">
-					</td>
-					<td align="center" style="background-color: rgb(255, 255, 255);">
-					    <span onclick="">100</span></td>
-				    <td align="center" style="background-color: rgb(255, 255, 255);">
-				        <span onclick="">1</span>
-				    </td>
-				    <td align="center" style="background-color: rgb(255, 255, 255);">
-				        <span onclick="">0</span>
-				    </td>
-				    <td align="center" style="background-color: rgb(255, 255, 255);">
-				      <a href="" target="_blank" title="查看"><img src="/images/icon_view.gif" width="21" height="21" border="0"></a>
-				      <a href="" title="编辑"><img src="/images/icon_edit.gif" width="21" height="21" border="0"></a>
-				      <a href="" title="复制"><img src="/images/icon_copy.gif" width="21" height="21" border="0"></a>
-				      <a  class="del" onclick="" title="回收站"><img src="/images/icon_trash.gif" width="21" height="21" border="0"></a>        
-				    </td>
-				</tr>-->
   			</tbody>
 		</table>
 		
@@ -146,9 +110,11 @@
 		        页当前第 <span id="pageCurrent">1</span>
 		        页，每页 <input type="text" size="3" id="pageSize" value="15" onkeypress="">
         <span id="page-link">
-          <a href="First()">第一页</a>
-          <a href="Prev()">上一页</a>
-          <a href="Next()">下一页</a>
+          <a href="">第一页</a>
+        
+          	<a href="">上一页</a>          
+      
+          <a href="">下一页</a>
           <a href="Last()">最末页</a>
           <select id="gotoPage" onchange="">
             <option value="1">1</option>
@@ -181,6 +147,11 @@
 </body>
 </html>
 <script type="text/javascript">
+//	$.ajax({
+//		type:"get",
+//		url:"/api/xuanranlist",
+//		
+//	});
 	function search(){
 		$.ajax({
 			type:"get",
@@ -189,7 +160,65 @@
 				goodsname:$(".keywords").val()
 			},
 			success:function(res){
-				console.log(res);
+//				console.log(res);
+//				var html =`<tr>
+//				    <th>
+//				      <input onclick="" type="checkbox">
+//				      <a href="">编号</a>
+//				      <img src="/images/sort_desc.gif">    
+//				    </th>
+//				    <th><a href="" title="点击对列表排序">商品名称</a></th>
+//				    <th><a href="" title="点击对列表排序">货号</a></th>
+//				    <th><a href="">价格</a></th>
+//				    <th><a href="">上架</a></th>
+//				    <th><a href="">精品</a></th>
+//				    <th><a href="">新品</a></th>
+//				    <th><a href="">热销</a></th>
+//				    <th><a href="">推荐排序</a></th>
+//				    <th><a href="">库存</a></th>
+//				    <th><a href="" title="点击对列表排序">虚拟销量</a></th>
+//				    <th>操作</th>
+//			  	</tr> `
+//				for(var i = 0 ; i < res.length ; i ++){
+//					html += `<tr>
+//					<td style="background-color: rgb(255, 255, 255);">
+//					    	<input type="checkbox" name="checkboxes[]" value="274">274</td>
+//					<td class="first-cell" style="background-color: rgb(255, 255, 255);">
+//					    <span onclick="">${res[i].goodsname}</span></td>
+//					<td align="center" style="background-color: rgb(255, 255, 255);">
+//					    <span onclick="">${res[i].goodsnumber}</span></td>
+//					<td align="center" style="background-color: rgb(255, 255, 255);">
+//					    <span onclick="">${res[i].goodsprice}</span>
+//					</td>
+//					<td align="center" style="background-color: rgb(255, 255, 255);">
+//					    <img src="/images/yes.gif" onclick="">
+//					</td>
+//					<td align="center" style="background-color: rgb(255, 255, 255);">
+//					    <img src="/images/no.gif" onclick=""></td>
+//					<td align="center" style="background-color: rgb(255, 255, 255);">
+//					    <img src="/images/no.gif" onclick=" 'toggle_new', 274)">
+//					</td>
+//					<td align="center" style="background-color: rgb(255, 255, 255);">
+//					    <img src="/images/no.gif" onclick=" 'toggle_hot', 274)">
+//					</td>
+//					<td align="center" style="background-color: rgb(255, 255, 255);">
+//					    <span onclick="">100</span></td>
+//				    <td align="center" style="background-color: rgb(255, 255, 255);">
+//				        <span onclick="">1</span>
+//				    </td>
+//				    <td align="center" style="background-color: rgb(255, 255, 255);">
+//				        <span onclick="">0</span>
+//				    </td>
+//				    <td align="center" style="background-color: rgb(255, 255, 255);">
+//				      <a href="" target="_blank" title="查看"><img src="/images/icon_view.gif" width="21" height="21" border="0"></a>
+//				      <a href="" title="编辑"><img src="/images/icon_edit.gif" width="21" height="21" border="0"></a>
+//				      <a href="" title="复制"><img src="/images/icon_copy.gif" width="21" height="21" border="0"></a>
+//				      <a  class="del" onclick="" title="回收站"><img src="/images/icon_trash.gif" width="21" height="21" border="0"></a>        
+//				    </td>
+//				</tr>`
+//				}
+//				$(".con").html(html);
+//								
 				if(res.status == 1){
 					console.log("success");
 				}else{
