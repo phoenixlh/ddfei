@@ -42,8 +42,6 @@
 				</div>
 				
 				<div id="zg">
-					
-				
 				<div id="xi" class="xx1">
 					
 					<form id="frm" action="/api/add_goods" method="post" enctype="multipart/form-data">
@@ -53,8 +51,8 @@
 									<td class="label">商品名称：</td>
 									<td>
 										<input type="text" name="goodsname" id="" value="" style="float: left; margin: 5px 0; padding: 1px 0px;" />
-										<div id="font_color" style="float:left ;margin:10px 0 0 5px; onclick="show()">
-											<img src="/images/color_selecter.gif" style="    margin-top: -1px;"/>
+										<div id="font_color" style="float:left ;margin:10px 0 0 5px; onclick="">
+											<img src="/images/color_selecter.gif" style="margin-top: -1px;"/>
 										</div>
 								
 										<select name="goods_name_style" style="margin: 5px 5px;">
@@ -66,8 +64,7 @@
 							              	<span class="require-field">*</span>
 									</td>
 								</tr>
-								
-								
+						
 								<tr>
 									<td class="label">
 										<a href="#" title="点击此处查看提示信息" >
@@ -77,25 +74,22 @@
 									</td>
 									<td>
 										<input type="" name="goodsnumber" id="" value="" /><br />
-										<span class="notice-span">如果您不输入商品货号，系统将自动生成一个唯一的货号。
-											
+										<span class="notice-span">如果您不输入商品货号，系统将自动生成一个唯一的货号。							
 										</span>
 									</td>
 								</tr>
-								
-								
+
 								<tr>
 									<td class="label">
 										商品分类：
 									</td>
 									<td>
-										<select name="cat_id" onchange=""><option value="0">请选择...</option><option value="132">钻石</option><option value="190">&nbsp;&nbsp;&nbsp;&nbsp;衬衫</option><option value="193">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;短袖衬衫</option><option value="194">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长袖衬衫</option><option value="170">&nbsp;&nbsp;&nbsp;&nbsp;裤子</option><option value="623">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;休闲短裤</option><option value="173">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;休闲裤</option><option value="174">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牛仔裤</option><option value="171">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;西裤</option><option value="172">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牛仔中裤</option><option value="629">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;休闲分裤</option><option value="160">&nbsp;&nbsp;&nbsp;&nbsp;外套</option><option value="162">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;卫衣</option><option value="167">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;棉服</option><option value="163">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;风衣</option><option value="168">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;羽绒服</option><option value="164">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大衣</option><option value="161">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;皮衣/皮草</option><option value="169">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;夹克</option><option value="166">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;西服</option><option value="683">&nbsp;&nbsp;&nbsp;&nbsp;sd</option><option value="154">&nbsp;&nbsp;&nbsp;&nbsp;内衣</option><option value="159">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内裤</option><option value="156">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内衣/套装</option><option value="157">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;袜子</option><option value="158">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;家居服</option><option value="182">&nbsp;&nbsp;&nbsp;&nbsp;POLO衫</option><option value="188">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;短袖POLO衫</option><option value="185">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长袖POLO衫</option><option value="175">&nbsp;&nbsp;&nbsp;&nbsp;T恤</option><option value="176">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长袖T恤</option><option value="32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;短袖衬衫</option><option value="110">&nbsp;&nbsp;&nbsp;&nbsp;针织衫</option><option value="114">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;套头衫</option><option value="115">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开衫</option><option value="628">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;短袖针织衫</option><option value="635">&nbsp;&nbsp;&nbsp;&nbsp;中老年服装</option><option value="639">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;裤装</option><option value="640">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;裙装</option><option value="636">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T恤</option><option value="638">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;衬衫</option><option value="637">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;针织衫</option><option value="39">&nbsp;&nbsp;&nbsp;&nbsp;外套</option><option value="626">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;风衣</option><option value="43">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;棉服</option><option value="40">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;卫衣</option><option value="624">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;皮衣</option><option value="41">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;西装</option><option value="625">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;夹克</option><option value="627">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大衣</option><option value="42">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;羽绒服</option><option value="16">运动户外</option><option value="120">&nbsp;&nbsp;&nbsp;&nbsp;运动服</option><option value="207">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电子词典</option><option value="204">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;音箱</option><option value="214">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;苹果配件</option><option value="211">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;专业音频</option><option value="208">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MP3/MP4配件</option><option value="205">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高清播放器</option><option value="201">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MP3/MP4</option><option value="202">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MID</option><option value="212">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电子教育</option><option value="209">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录音笔</option><option value="206">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电子书</option><option value="213">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数码相框</option><option value="210">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;麦克风</option><option value="17">&nbsp;&nbsp;&nbsp;&nbsp;运动鞋</option><option value="20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GSM手机</option><option value="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDMA手机</option><option value="19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;双模手机</option><option value="18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3G手机</option><option value="116">&nbsp;&nbsp;&nbsp;&nbsp;运动包</option><option value="119">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数码摄像机</option><option value="117">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;便携相机</option><option value="203">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;耳机</option><option value="99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;办公软件</option><option value="101">&nbsp;&nbsp;&nbsp;&nbsp;童鞋</option><option value="104">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;色带</option><option value="111">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;硒鼓</option><option value="102">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;墨盒</option><option value="103">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;墨粉</option><option value="86">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;鼠标</option><option value="87">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;键盘</option><option value="93">&nbsp;&nbsp;&nbsp;&nbsp;玩具/早教</option><option value="94">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;路由器</option><option value="95">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网卡</option><option value="96">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交换机</option><option value="74">&nbsp;&nbsp;&nbsp;&nbsp;婴童洗护</option><option value="81">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;光驱</option><option value="78">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;显卡</option><option value="112">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UPS电源</option><option value="75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CPU</option><option value="82">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;散热器</option><option value="79">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主板</option><option value="76">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;硬盘</option><option value="80">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;声卡</option><option value="77">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内存</option><option value="44">鞋靴</option><option value="62">&nbsp;&nbsp;&nbsp;&nbsp;运动健康</option><option value="65">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;室内球类</option><option value="63">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运动器材</option><option value="64">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;户外装备</option><option value="50">&nbsp;&nbsp;&nbsp;&nbsp;女鞋</option><option value="52">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;童鞋</option><option value="53">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;腰带</option><option value="51">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;休闲鞋</option><option value="66">&nbsp;&nbsp;&nbsp;&nbsp;趣味玩具</option><option value="68">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;遥控玩具</option><option value="67">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电动玩具</option><option value="54">&nbsp;&nbsp;&nbsp;&nbsp;礼品箱包</option><option value="46">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;被子</option><option value="47">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;枕头</option><option value="48">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;家纺毛巾</option><option value="58">&nbsp;&nbsp;&nbsp;&nbsp;钟表首饰</option><option value="59">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日本表店</option><option value="60">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;流行饰品</option><option value="61">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;国产表店</option><option value="215">箱包</option><option value="223">&nbsp;&nbsp;&nbsp;&nbsp;女装</option><option value="226">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;针织</option><option value="230">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;裤子</option><option value="370">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BALENCIAGA</option><option value="367">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARMANI</option><option value="364">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DIOR</option><option value="361">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FENDI</option><option value="374">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更多品牌</option><option value="371">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dolce&amp;Gabbana</option><option value="368">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RIMOWA</option><option value="365">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ferragamo</option><option value="362">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BURBERRY</option><option value="359">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GUCCI</option><option value="372">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MARC JACOBS</option><option value="369">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIUMIU</option><option value="366">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONTBLANC</option><option value="363">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOTTEGA VENETA</option><option value="360">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRADA</option><option value="373">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COACH</option><option value="339">&nbsp;&nbsp;&nbsp;&nbsp;功能箱包</option><option value="376">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;瑞士品牌</option><option value="382">&nbsp;&nbsp;&nbsp;&nbsp;彩妆</option><option value="386">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;钻石饰品</option><option value="383">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;纯金K金饰品</option><option value="390">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时尚饰品</option><option value="387">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;翡翠玉石</option><option value="384">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;金银投资</option><option value="388">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;水晶玛瑙</option><option value="385">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;银饰</option><option value="389">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宝石珍珠</option><option value="662">&nbsp;&nbsp;&nbsp;&nbsp;美妆团购</option><option value="537">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;冲调饮品</option><option value="534">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;饼干蛋糕</option><option value="538">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粮油调味</option><option value="535">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;糖果巧克力</option><option value="536">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;休闲零食</option><option value="547">&nbsp;&nbsp;&nbsp;&nbsp;休闲食品</option><option value="553">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;饼干蛋糕</option><option value="550">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;肉干肉松</option><option value="551">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;蜜饯果脯</option><option value="548">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;休闲零食</option><option value="552">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;糖果/巧克力</option><option value="549">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;坚果炒货</option></select>
+										<select name="cat_id" onchange=""><option value="0">请选择...</option><option value="549">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;坚果炒货</option></select>
 										<a titel="添加分类" class="special">添加分类</a>
 										<span class="require-field">*</span>
 									</td>
 								</tr>
-								
-								
+	
 								<tr>
 									<td class="label">扩展分类：</td>
 									<td>
@@ -106,10 +100,10 @@
 								<tr>
 									<td class="label">商品品牌：</td>
 									<td>
-										<select name="brand_id" onchange="hideBrandDiv()">
+										<select name="brand_id" onchange="">
 											<option value="0">请选择...</option><option value="45">gr</option>
 											<option value="33">空间大师</option><option value="32">溢彩年华</option>
-											<option value="31">EVENY</option><option value="30">圣迪奥</option><option value="29">韩都衣舍</option><option value="28">betu百图</option><option value="27">艾夫斯</option><option value="26">太平鸟</option><option value="25">O.SA</option><option value="34">美好家</option><option value="35">生活诚品</option><option value="44">kk</option><option value="43">帮宝适</option><option value="42">贝亲</option><option value="41">雅培</option><option value="40">好事达</option><option value="39">千弘</option>
+											<option value="41">雅培</option><option value="40">好事达</option><option value="39">千弘</option>
 										</select>
 										<a title="添加品牌" onclick=pp() class="special">添加品牌</a>
 									</td>
@@ -120,7 +114,8 @@
 									<td>
 										<input type="text" name="goodsprice" value="0" size="20">
             							<input type="button" value="按市场价计算" onclick="">
-            <span class="require-field">*</span></td>
+            							<span class="require-field">*</span>
+									</td>
 								</tr>
 								
 								<tr>
@@ -131,18 +126,18 @@
 						        </tr>
 						        
 						        <tr>
-            <td class="label">虚拟销量：</td>
-            <td><input type="text" name="virtual_sales" value="0" size="20">
-            </td>
-          </tr>
-						        
-						        <tr id="promote_4">
+						            <td class="label">虚拟销量：</td>
+						            <td><input type="text" name="virtual_sales" value="0" size="20">
+						            </td>
+						        </tr>
+												        
+								 <tr id="promote_4">
 						            <td class="label" id="promote_5">促销日期：</td>
 						            <td id="promote_6">
-						            <input name="promote_start_date" type="text" id="promote_start_date" size="12" value="2018-02-28" readonly="readonly">
-						            <input name="selbtn1" type="button" id="selbtn1" onclick="return showCalendar('promote_start_date', '%Y-%m-%d', false, false, 'selbtn1');" value="选择" class="button" disabled=""> - 
-						            	<input name="promote_end_date" type="text" id="promote_end_date" size="12" value="2018-03-28" readonly="readonly">
-						            <input name="selbtn2" type="button" id="selbtn2" onclick="return showCalendar('promote_end_date', '%Y-%m-%d', false, false, 'selbtn2');" value="选择" class="button" disabled="">
+							            <input name="promote_start_date" type="text" id="promote_start_date" size="12" value="2018-02-28" readonly="readonly">
+							            <input name="selbtn1" type="button" id="selbtn1" onclick="" value="选择" class="button" disabled=""> - 
+							            	<input name="promote_end_date" type="text" id="promote_end_date" size="12" value="2018-03-28" readonly="readonly">
+							            <input name="selbtn2" type="button" id="selbtn2" onclick="" value="选择" class="button" disabled="">
 						            </td>
 						        </tr>
 						        
@@ -161,7 +156,7 @@
 						              <input type="file" name="goods_thumb" size="35" disabled="">
 						            <img src="/images/no.gif"><br>
 						            <input type="text" size="40" value="商品缩略图外部URL" style="color:#aaa;" name="goods_thumb_url" disabled=""> <br>
-						            <label for="auto_thumb"><input type="checkbox" id="auto_thumb" name="auto_thumb" checked="true" value="1" onclick="AutoThumb()">自动生成商品缩略图</label>            
+						            <label for="auto_thumb"><input type="checkbox" id="auto_thumb" name="auto_thumb" checked="true" value="1" onclick="">自动生成商品缩略图</label>            
 						            </td>
 						          </tr>
 							</tbody>
@@ -171,10 +166,8 @@
 				            <input type="button" value=" 确定 " name="sure" class="button" onclick="addgoods()">
 				            <input type="reset" value=" 重置 " name="reset" class="button">
 				        </div>
-	
 					</form>
 				</div>
-				
 				
 				<!--tab切换-->
 				<div id="xi2" class="xx1" style="display: none;"></div>

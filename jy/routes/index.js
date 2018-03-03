@@ -18,24 +18,34 @@ router.get('/right', function(req, res, next) {
   res.render('right');
 });
 
-router.get('/list', function(req, res) {
+//router.get('/list', function(req, res) {
 //		GoodsModel.find(function(err,docs){
-			var pageNo = parseInt(req.query.pageNo) || 1;
-	 	var count = parseInt(req.query.count) || 3;
-	 	
-	 	var query = GoodsModel.find({}).skip( (pageNo-1)*count ).limit(count).sort({date:-1});
-	 	query.exec(function(err,results){
-	 		res.render('list',{list:results,pageNo:pageNo,count:count});
-	 	})
+////			var pageNo = parseInt(req.query.pageNo) || 1;
+////	 	var count = parseInt(req.query.count) || 3;
+//	 	
+////	 	var query = GoodsModel.find({}).skip( (pageNo-1)*count ).limit(count).sort({date:-1});
+////	 	query.exec(function(err,results){
+////	 		res.render('list',{list:results,pageNo:pageNo,count:count});
+////	 	})
 //			res.render('list',{list:docs});			
-//		})
-});
+////		})
+//});
 
+
+//商品列表页面
+router.get('/list',function(req,res){
+	GoodsModel.find({},function(err,docs){
+		res.render('list',{list:docs});
+	})
+})
+
+
+//商品查询功能
 router.get('/api/goodslist',function(req,res){
 	var goodsname = req.query.goodsname;
-	GoodsModel.find({goodsname:goodsname},function(err,docs){
-	  
-//		res.render('search',{list:docs});
+//	GoodsModel.find({goodsname:goodsname},function(err,docs){
+		GoodsModel.find({goodsname:{$regex:goodsname}},function(err,docs){
+		res.render('list',)
 		var result = {
 			status:1,
 			message:"查询成功"
@@ -52,10 +62,7 @@ router.get('/api/goodslist',function(req,res){
 	})
 })
 
-router.get('/goods_add', function(req, res, next) {
-  res.render('goods_add');
-});
-
+//登录功能
 router.post('/api/login',function(req,res){
 	var username = req.body.username;
 	var pwd = req.body.pwd;
@@ -78,11 +85,20 @@ router.post('/api/login',function(req,res){
 	})
 });
 
+
+//添加商品页
+router.get('/goods_add', function(req, res, next) {
+  res.render('goods_add');
+});
+
+
+//商品保存功能
 router.post('/api/add_goods',function(req,res){
 	 var form = new multiparty.Form({
 	 	uploadDir:"./public/js"
 	 });
 	 form.parse(req, function(err, body, files) {
+	 	//req里是上传的内容，body(fields)内放的是表单数据，files内是文件
 	 	//转换后的对象都是数组形式
 	 	var goodsname = body.goodsname[0];
 	 	var goodsnumber = body.goodsnumber[0];
@@ -103,12 +119,12 @@ router.post('/api/add_goods',function(req,res){
 	 			console.log("商品保存成功");
 	 			res.send(result);
 	 		}else{
-	 			console.log("文件上传失败");
+	 			console.log("商品保存失败");
 	 			result.status = -333;
 	 			result.message = "商品保存失败";
 	 			res.send(result);
 	 		}
-	 	})
+	 	});
 });
 })
 

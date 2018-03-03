@@ -134,6 +134,7 @@
 				</tr>-->
   			</tbody>
 		</table>
+		
 <!-- 分页 -->
 <table id="page-table" cellspacing="0">
   <tbody>	
@@ -160,8 +161,8 @@
   </tr>
 </tbody>
 </table>
-
 </div>
+
 <div>
   <input type="hidden" name="act" value="batch">
   <select name="type" id="selAction">
@@ -173,9 +174,7 @@
 </div>
 </form>
 		<div id="footer">
-					
 共执行 35 个查询，用时 0.025601 秒，Gzip 已禁用，内存占用 2.155 MB<br />
-
 版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。
 		</div>
 	</div>
@@ -190,13 +189,13 @@
 				goodsname:$(".keywords").val()
 			},
 			success:function(res){
-//				console.log(res);
-				if(res.status == 66){
+				console.log(res);
+				if(res.status == 1){
 					console.log("success");
-			}else{
-				console.log("failed");
+				}else{
+					console.log("failed");
+				}
 			}
-		}
-	})
-}
+		})
+	}
 </script>
