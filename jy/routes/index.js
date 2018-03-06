@@ -29,40 +29,45 @@ router.get('/list',function(req,res){
 	GoodsModel.find({},function(err,docs){
 		res.render('list',{list:docs});
 	})
-})
+});
 
 
 //模糊查询功能
 router.get('/api/goodslist',function(req,res){
-	var goodsname = req.query.goodsname;
-	GoodsModel.find({goodsname:{$regex:goodsname}},function(err,docs){
-//	res.render('list',{list:docs});
-		var result = {
-			status:1,
-			message:"查询成功"
-		}
-		if(!err && docs.length > 0){
-			console.log("查询成功");
-			res.send(result);
-		}else{
-			console.log("查询失败");
-			result.status = -118;
-			result.message = "查询失败";
-			res.send(result);
-		}
+	var goods_name = req.query.goodsname;
+	GoodsModel.count({goods_name:{$regex:goodsname}},function(err,count){
+			GoodsModel.find({goods_name:{$regex:goodsname}},function(err,docs){
+				var pageNo = parseInt(req.query.pageNo || 1 );
+				var count = parseint(req.query.count || 5 );
+//		var result = {
+//			status:1,
+//			message:"查询成功"
+//		}
+//		if(!err && docs.length > 0){
+//			console.log("查询成功");
+//			res.send(result);
+////				res.render('list',{list:docs});
+//		}else{
+//			console.log("查询失败");
+//			result.status = -118;
+//			result.message = "查询失败";
+//			res.send(result);
+//		}
 	})
+	})
+
 })
 
 //返回模糊查询结果，渲染页面功能
-router.get('/api/xuanranlist',function(req,res){
-	var pageNo = parseInt(req.query.pageNo || 1);
-	var count = parseInt(req.query.count || 3);
-//	var query = GoodsModel.find({}).skip( (pageNo-1)*count ).limit(count).sort({date:-1});
-//	query.exec(function(err,results){
-//		res.send({list:results,pageNo:pageNo,count:count});
-		res.render('list',{list:results,pageNo:pageNo,count:count});
-	})
-})
+//router.get('/api/xuanranlist',function(req,res){
+//	var pageNo = parseInt(req.query.pageNo || 1);
+//	var count = parseInt(req.query.count || 3);
+////	var query = GoodsModel.find({}).skip( (pageNo-1)*count ).limit(count).sort({date:-1});
+////	query.exec(function(err,results){
+////		res.send({list:results,pageNo:pageNo,count:count});
+//		res.render('list',{list:results,pageNo:pageNo,count:count});
+//	})
+
 
 //分页功能
 //router.get('/list',function(req,res){
@@ -83,15 +88,15 @@ router.post('/api/add_goods',function(req,res){
 	 form.parse(req, function(err, body, files) {
 	 	//req里是上传的内容，body(fields)内放的是表单数据，files内是文件
 	 	//转换后的对象都是数组形式
-	 	var goodsname = body.goodsname[0];
-	 	var goodsnumber = body.goodsnumber[0];
-	 	var goodsprice = body.goodsprice[0];
+	 	var goods_name = body.goodsname[0];
+	 	var goods_number = body.goodsnumber[0];
+	 	var goods_price = body.goodsprice[0];
 	 	
 	 	var gm = new GoodsModel();
-	 	gm.goodsname = goodsname;
-	 	gm.goodsnumber = goodsnumber;
-	 	gm.goodsprice = goodsprice;
-	 	console.log(goodsname,goodsnumber,goodsprice);
+	 	gm.goodsname = goods_name;
+	 	gm.goodsnumber = goods_number;
+	 	gm.goodsprice = goods_price;
+//	 	console.log(goods_name,goods_number,goods_price);
 //		console.log(files);
 	 	gm.save(function(err){
 	 		var result = {

@@ -157,7 +157,9 @@
 			type:"get",
 			url:"/api/goodslist",
 			data:{
-				goodsname:$(".keywords").val()
+				goodsname:$(".keywords").val(),
+				pageNo:pageNo,
+				count:count
 			},
 			success:function(res){
 //				console.log(res);
